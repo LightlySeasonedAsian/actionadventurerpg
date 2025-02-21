@@ -12,7 +12,6 @@ func Exit() -> void:
 	
 #what happens during the process update in this state
 func Process(delta: float) -> State:
-	print(player.direction)
 	if player.direction != Vector2.ZERO:
 		return walk
 	player.velocity = Vector2.ZERO

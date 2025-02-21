@@ -47,10 +47,8 @@ func ChangeState(new_state : State) -> void:
 		
 	if current_state:
 		current_state.Exit()
-	print(prev_state,current_state,new_state)
 	prev_state = current_state
 	current_state = new_state
-	print("p",prev_state,"c",current_state,"n",new_state)
 	current_state.Enter()
 	pass
 	
