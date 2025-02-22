@@ -11,13 +11,12 @@ var attacking : bool = false
 
 @onready var walk: State = $"../walk"
 @onready var idle: State_Idle = $"../idle"
-@onready var hurt_box: HurtBox = $"../../Interactions/HurtBox"
-
+@onready var hurt_box: HurtBox = %AttackHurtBox
 
 #what happens when the player enters this state
 func Enter() -> void:
 	player.UpdateAnimation("attack")
-	attack_anim.play("attack_" + player.AnimDirection())
+	attack_anim.play("sword_attack_" + player.AnimDirection())
 	animation_player.animation_finished.connect(EndAttack)
 	
 	audio.stream = attack_sound

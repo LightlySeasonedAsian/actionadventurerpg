@@ -12,14 +12,14 @@ func Exit() -> void:
 	pass
 	
 #what happens during the process update in this state
-func Process(delta: float) -> State:
+func Process(_delta: float) -> State:
 	if player.direction != Vector2.ZERO:
 		return walk
 	player.velocity = Vector2.ZERO
 	return null
 	
 #what happens during the _physics_process update in this state
-func Physics(delta: float) -> State:
+func Physics(_delta: float) -> State:
 	return null
 	
 #what happens with input events in this state
